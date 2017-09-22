@@ -26,9 +26,18 @@ public class App {
         
         Mosogato mosogato = konyha.getMosogato();
         mosogato.belehelyez(pohar);
+        mosogato.elmos(pohar); // TODO: ha nem mosod el, kapsz egy exception-t !
         
         konyha.konyhaElhagyasa();
-        
+
+        System.out.println("\\o/");
+    }
+
+    // parts of a module can be really private
+    // (io.codelens.fun.java9test.internal is not visible, java9test.def.impl does not export it)
+    private static Konyha createKonyha() {
+        // return new io.codelens.fun.java9test.internal.DefaultKonyha();
+        return null;
     }
 
 }
